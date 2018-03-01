@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+    <script>
+var i=0;
+var url = "http://192.168.0.20:8081/";
+function jsUpdate() {document.image.src=url+"&"+(i++);}
+    </script>
+</head>
+<body onLoad="jsUpdate()">
+    <img name="image" onLoad="jsUpdate()">
+</body>
+</html>

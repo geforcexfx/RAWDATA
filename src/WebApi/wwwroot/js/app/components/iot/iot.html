@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css" media="screen" />
+</head>
+<body onload="clickButton()">
+    <h1>My little IoT website</h1>
+
+    <div class="container-fluid">
+        <div class="left-element">
+            <img src="cody.jpg" alt="My little IoT website" style="width:200px;height:200px;">
+            <!-- Trigger/Open The Modal -->
+            <p>Please choose functions</p>
+            <button id="myBtn">See room climate</button>
+            <p>Click to turn the airpump:</p>
+            <input onclick="change()" type="button" value="OFF" id="SeeMore2"></input>
+            <p id="fold">
+            <p>Status of the airpump: </p>
+            <p id="demo2"></p>
+
+            <button onclick="clickButton()">Check room status</button>
+            <p id="demo1"></p>
+            </p>
+        </div>
+        <div class="right-element">
+            <p>
+                <!--<iframe src="http://192.168.1.186:8088/" name="targetframe" width="640" height="480" allowTransparency="true" scrolling="no" frameborder="0" >
+                </iframe>-->
+            </p>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Cick to check temperature and humidity</p>
+            <iframe src="http://192.168.0.56:8089"></iframe>
+        </div>
+
+    </div>
+    <div id="result" style="display:none;"></div>
+
+
+
+    <script type="text/javascript" src="app.js"> </script>
+</html>

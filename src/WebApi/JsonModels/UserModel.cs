@@ -12,5 +12,6 @@ namespace WebApi.JsonModels
         public string UserLocation { get; set; }
         public int UserAge { get; set; }
         public DateTime UserCreationDate { get; set; }
+        public string password { get; set; }
     }
 }

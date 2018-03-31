@@ -10,7 +10,10 @@
             "dataservice": "app/services/dataService",
             "postbox": "app/services/postbox",
             "config": "app/config",
-            "jqcloud2": "lib/jqcloud2/dist/jqcloud.min"
+            "jqcloud2": "lib/jqcloud2/dist/jqcloud.min",
+            "myCallback": "app/services/callb",
+            "myCall": "lib/cl"
+
         },
         shim: {
             "bootstrap": { "deps": ['jquery'] }
@@ -58,9 +61,15 @@
         {
             template: { require: "text!app/components/about/about.html" }
         });
-        ko.components.register("security",
+        ko.components.register("iot",
+        {
+            viewModel: { require: "app/components/iot/login" },
+            template: { require: "text!app/components/iot/loginView.html" }
+        });
+        ko.components.register("loggedin",
        {
-           template: { require: "text!app/components/security/secur.html" }
+           viewModel: { require: "app/components/iot/iotapp" },
+           template: { require: "text!app/components/iot/iotView.html" }
        });
     });
 

@@ -13,6 +13,13 @@
         console.log('after post');
     };
 
+    var getUser = function (callback) {
+        var url = "api/users";
+        $.getJSON(url, function (data) {
+            callback(data.data);
+        });
+    };
+
     var getSearchedResults = function (searchValue, callback) {
         console.log("first");
         return $.ajax({
@@ -167,6 +174,6 @@
     };
     return {
         getAnnotations, getHistoryPage, updateStatus,
-        getSearchedResults, getPostId, getHistoryDetails, getHistory, postAnno, putAnno, delAnno, getSearchedBmResults, getWordCloud
+        getSearchedResults, getPostId, getHistoryDetails, getHistory, postAnno, putAnno, delAnno, getSearchedBmResults, getWordCloud, getUser
     };
 });

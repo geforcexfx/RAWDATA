@@ -6,7 +6,7 @@
             { title: config.menuItems.annotations, component: 'annotation-list' },
             { title: config.menuItems.cloud, component: 'word-cloud' },
             { title: config.menuItems.about, component: 'about' },
-            { title: config.menuItems.about, component: 'security' }
+            { title: config.menuItems.iot, component: 'iot' }
         ];
         var currentParams = ko.observable();
         var currentComponent = ko.observable();
@@ -33,7 +33,10 @@
                 }
             }
         });
-
+        postbox.subscribe(config.events.loggedin, function () {
+            console.log("ok");
+            currentComponent("loggedin");
+        });
         selectMenu(menuItems[0]);
 
         return {

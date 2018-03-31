@@ -8,7 +8,9 @@ define([], function () {
             changeMenu: "ChangeMenu",
             deleteAnnotation: "DeleteAnnotation",
             selectSearch: "SelectSearch",
-            pageNumber: "pageNumber"
+            pageNumber: "pageNumber",
+            loggedin: "loggedin",
+            jsoniot: "jsoniot"
         },
         menuItems: {
             search: "Search Posts",
@@ -16,7 +18,7 @@ define([], function () {
             annotations: "Personal Comments",
             cloud: "Word Cloud",
             about: "About",
-            security: "Security"
+            iot: "IoT"
         }
     };
 });

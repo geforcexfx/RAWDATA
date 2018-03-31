@@ -50,7 +50,7 @@ namespace DatabaseService
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseMySql("server=wt-220.ruc.dk;database=raw7;uid=raw7;pwd=raw7");
+            optionsBuilder.UseMySql("server=localhost;database=sova_final;uid=root;pwd=root");
 
             base.OnConfiguring(optionsBuilder);
         }

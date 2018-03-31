@@ -1,18 +1,18 @@
 ﻿<!DOCTYPE html>
-<!DOCTYPE html>
+
 
 <html>
 <head>
        <meta name="viewport" content="width=device-width, initial-scale=1">
    
 </head>
-<body onload="clickButton()">
+<body>
     <h1>My little IoT website</h1>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th class="col-md-4">searchString</th>
-                <th class="col-md-4">searchTime</th>
+                <th class="col-md-4">Temperature</th>
+                <th class="col-md-4">Airpump status</th>
                 <th class="col-md-4"></th>
             </tr>
         </thead>
@@ -29,41 +29,22 @@
             <img src="../../../../css/images/cody.jpg" alt="My little IoT website" style="width:200px;height:200px;">
             <!-- Trigger/Open The Modal -->
             <p>Please choose functions</p>
-            <button data-bind="myBtn">See room climate</button>
+            <button data-bind="myBtn">Check temperature and humidity manually</button>
             <p>Click to turn the airpump:</p>
-            <button data-bind="click: change">Change</button>
            
+            <button data-bind="click: changeButtonText, text: buttonText"></button>
             <p data-bind="demo2"></p>
 
-            <button data-bind="clickButton">Check room status</button>
 
-            <button data-bind="click: changeButtonText, value: SeeMore2"></button>
-            <span data-bind="text: SeeMore2"></span>
-            <p data-bind="demo1"></p>
-            </p>
-        </div>
-        <div class="right-element">
-            <p>
-                <!--<iframe src="http://192.168.1.186:8088/" name="targetframe" width="640" height="480" allowTransparency="true" scrolling="no" frameborder="0" >
-                </iframe>-->
-            </p>
-        </div>
-    </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
 
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Cick to check temperature and humidity</p>
-            <iframe src="http://192.168.0.56:8089"></iframe>
         </div>
 
     </div>
-    <div id="result" style="display:none;"></div>
+
 
 
 
     <script type="text/javascript" src="app.js"> </script>
+</body>
 </html>

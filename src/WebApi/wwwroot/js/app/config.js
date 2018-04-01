@@ -10,7 +10,9 @@ define([], function () {
             selectSearch: "SelectSearch",
             pageNumber: "pageNumber",
             loggedin: "loggedin",
-            jsoniot: "jsoniot"
+            jsoniot: "jsoniot",
+            anologin: "anologin",
+            comment: "comment"
         },
         menuItems: {
             search: "Search Posts",
@@ -18,7 +20,8 @@ define([], function () {
             annotations: "Personal Comments",
             cloud: "Word Cloud",
             about: "About",
-            iot: "IoT"
+            iot: "IoT",
+            cv: "Curriculum Vitae"
         }
     };
 });

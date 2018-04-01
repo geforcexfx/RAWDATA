@@ -1,12 +1,14 @@
 ﻿define(['knockout', 'postbox', 'config'], function (ko, postbox, config) {
     return function () {
         var menuItems = [
+            { title: config.menuItems.cv, component: 'cv' },
+            { title: config.menuItems.iot, component: 'iot' },
             { title: config.menuItems.search, component: 'search-list' },
             { title: config.menuItems.history, component: 'search-history' },
-            { title: config.menuItems.annotations, component: 'annotation-list' },
+            { title: config.menuItems.annotations, component: 'anologin' },
             { title: config.menuItems.cloud, component: 'word-cloud' },
-            { title: config.menuItems.about, component: 'about' },
-            { title: config.menuItems.iot, component: 'iot' }
+            { title: config.menuItems.about, component: 'about' }
+            
         ];
         var currentParams = ko.observable();
         var currentComponent = ko.observable();
@@ -36,6 +38,16 @@
         postbox.subscribe(config.events.loggedin, function () {
             console.log("ok");
             currentComponent("loggedin");
+        });
+
+        postbox.subscribe(config.events.anologin, function () {
+            console.log("ok");
+            currentComponent("annotation-list");
+        });
+
+        postbox.subscribe(config.events.comment, function () {
+            console.log("ok");
+            currentComponent("comment");
         });
         selectMenu(menuItems[0]);
 

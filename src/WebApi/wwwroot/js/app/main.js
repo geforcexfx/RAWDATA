@@ -71,6 +71,22 @@
            viewModel: { require: "app/components/iot/iotapp" },
            template: { require: "text!app/components/iot/iotView.html" }
        });
+        ko.components.register("cv",
+       {
+          viewModel: { require: "app/components/CV/CVapp" },
+           template: { require: "text!app/components/CV/CV.html" }
+       });
+        ko.components.register("anologin",
+        {
+            viewModel: { require: "app/components/annotation/anologin" },
+            template: { require: "text!app/components/annotation/anologinView.html" }
+        });
+        ko.components.register("comment",
+        {
+            viewModel: { require: "app/components/CV/commentapp" },
+            template: { require: "text!app/components/CV/commentView.html" }
+        });
+        
     });
 
     require(['knockout'], function (ko) {
